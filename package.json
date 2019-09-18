@@ -5,8 +5,9 @@
   "scripts": {
     "start": "node ./bin/www",
     "test": "./node_modules/.bin/nyc --reporter=lcov --reporter=text-summary node_modules/.bin/_mocha --recursive --exit",
-    "reportCoverage": "cat coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "check-coverage": "./node_modules/.bin/nyc check-coverage"
   },
+  "main": "bin/www",
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
@@ -15,9 +16,14 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "coveralls": "^3.0.6",
     "mocha": "^6.2.0",
     "nyc": "^14.1.1",
     "supertest": "^4.0.2"
+  },
+  "nyc": {
+    "branches": 80,
+    "lines": 95,
+    "functions": 80,
+    "statements": 80
   }
 }

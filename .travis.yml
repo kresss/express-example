@@ -11,6 +11,5 @@ jobs:
         - "10"
         - "8"
       env: NODE_ENV=test
-      script: "npm run test"
-      after_success:
-        - "npm run reportCoverage"
+      script: "npm run test && npm run check-coverage"
+
