@@ -3,6 +3,7 @@ language: node_js
 
 stages:
   - test
+  - "GitHub Release"
 
 jobs:
   include:
@@ -12,4 +13,11 @@ jobs:
         - "8"
       env: NODE_ENV=test
       script: "npm run test && npm run check-coverage"
-
+    - stage: "GitHub Release"
+      script: echo "Deploying to GitHub releases ..."
+      deploy:
+        provider: releases
+        api_key: $GITHUB_OAUTH_TOKEN
+        skip_cleanup: true
+        on:
+          tags: true
