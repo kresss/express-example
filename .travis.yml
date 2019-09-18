@@ -1,0 +1,13 @@
+---
+language: node_js
+node_js:
+ - "10"
+ - "8"
+
+script: echo "Running tests against $(node -v) ..."
+
+install:
+  - npm install
+
+test:
+  - npm run test
