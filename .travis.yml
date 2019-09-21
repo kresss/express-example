@@ -16,6 +16,8 @@ jobs:
       script: "npm run test && npm run check-coverage"
     - stage: "Security Check"
       script: "npm audit"
+      node_js:
+        - "10"
     - stage: "GitHub Release"
       script: echo "Deploying to GitHub releases ..."
       deploy:
