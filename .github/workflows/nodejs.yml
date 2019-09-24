@@ -8,7 +8,7 @@ on:
       - 'releases/*'   # Push events to branches matching refs/heads/releases/*
     tags:
       - '*'
-  pull_requests:
+  pull_request:
     branches:
       - master         # Any pull request trying to merge into master
 
