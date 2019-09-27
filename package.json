@@ -4,26 +4,20 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "test": "./node_modules/.bin/nyc --reporter=lcov --reporter=text-summary node_modules/.bin/_mocha --recursive --exit",
-    "check-coverage": "./node_modules/.bin/nyc check-coverage"
+    "test": " NODE_V8_COVERAGE=coverage; ./node_modules/.bin/_mocha --recursive --exit",
+    "check-coverage": "./node_modules/.bin/c8 check-coverage --lines 95 --functions 95 --branches 95"
   },
   "main": "bin/www",
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-    "morgan": "1.9.0"
+    "morgan": "1.9.1"
   },
   "devDependencies": {
+    "c8": "^5.0.4",
     "chai": "^4.2.0",
     "mocha": "^6.2.0",
-    "nyc": "^14.1.1",
     "supertest": "^4.0.2"
-  },
-  "nyc": {
-    "branches": 80,
-    "lines": 95,
-    "functions": 80,
-    "statements": 80
   }
 }
