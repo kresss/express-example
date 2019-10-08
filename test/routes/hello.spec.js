@@ -1,3 +1,5 @@
+/* eslint-env mocha */
+
 const server = require('../../bin/www');
 const request = require('supertest');
 
