@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "lint": "./node_modules/.bin/semistandard",
     "test": " NODE_V8_COVERAGE=coverage; ./node_modules/.bin/_mocha --recursive --exit",
     "check-coverage": "./node_modules/.bin/c8 check-coverage --lines 95 --functions 95 --branches 95"
   },
@@ -16,8 +17,8 @@
   },
   "devDependencies": {
     "c8": "^5.0.4",
-    "chai": "^4.2.0",
     "mocha": "^6.2.0",
+    "semistandard": "^14.2.0",
     "supertest": "^4.0.2"
   }
 }
