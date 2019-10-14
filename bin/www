@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+
+/* c8 ignore next 100 */
 /**
  * Module dependencies.
  */
