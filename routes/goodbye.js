@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/:name', function (req, res, next) {
-  res.send("Goodbye " + req.params.name + '!');
+  res.send('Goodbye ' + req.params.name + '!');
 });
 
 module.exports = router;
