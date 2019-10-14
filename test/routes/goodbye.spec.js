@@ -3,7 +3,7 @@
 const server = require('../../bin/www');
 const request = require('supertest');
 
-describe.skip('Goodbye API', function () {
+describe('Goodbye API', function () {
   it('Goodbye Responds with Goodbye', function (done) {
     request(server)
       .get('/goodbye')
