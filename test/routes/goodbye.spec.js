@@ -13,6 +13,6 @@ describe('Goodbye API', function () {
   it('Goodbye Responds with Goodbye Seth when given a parameter', function (done) {
     request(server)
       .get('/goodbye/Seth')
-      .expect(200, 'Goodbye Seth', done);
+      .expect(200, 'Goodbye Seth!', done);
   });
 });
