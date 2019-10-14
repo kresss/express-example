@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "lint": "./node_modules/.bin/semistandard",
     "test": "export NODE_V8_COVERAGE=coverage; ./node_modules/.bin/_mocha --recursive --exit",
-    "check-coverage": "./node_modules/.bin/c8 check-coverage --temp-directory=coverage --lines 95 --functions 95 --branches 95"
+    "check-coverage": "./node_modules/.bin/c8 check-coverage --per-file true --temp-directory=coverage --lines 95 --functions 95 --branches 95"
   },
   "main": "bin/www",
   "dependencies": {
